@@ -1,0 +1,225 @@
+@import url("http://fonts.googleapis.com/css?family=Press+Start+2P");
+arrowUp ($size) {
+  width: 0;
+  height: 0;
+  border-left: $size solid transparent;
+  border-right: $size solid transparent;
+  border-bottom: $size solid #272727;
+}
+.main_title {
+  font-family: "Press Start 2P";
+  font-size: 10vw;
+  margin: 30vh 10% 10vh;
+  transition: text-shadow 0.2s linear;
+}
+.main_title:hover {
+  cursor: pointer;
+  text-shadow: 0.5vw 0.5vw 0 rgba(255,0,0,0.3), -0.5vw -0.5vw 0 rgba(0,0,255,0.3);
+}
+.links {
+  font-family: Verdana, Geneva, sans-serif;
+  text-align: center;
+  font-size: 25px;
+  margin: 5vh auto;
+  width: 80vw;
+  border: 4px solid #272727;
+  padding-top: 4vh;
+  box-shadow: 2px 2px 4px 2px rgba(39,39,39,0.7);
+}
+.links a {
+  text-decoration: none;
+  color: #272727;
+  margin: 0 2vw 4vh;
+  display: block;
+  position: relative;
+}
+.links a::after {
+  content: '';
+  position: absolute;
+  bottom: -1vh;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  visibility: hidden;
+  transform: scaleX(0);
+  background-color: #272727;
+  transition: all 0.3s ease;
+}
+.links a:hover::after {
+  transform: scaleX(1);
+  visibility: visible;
+}
+.cv {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 0;
+}
+.cv .title {
+  font-size: 3em;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .cv .title {
+    font-size: 2.3em;
+  }
+}
+.cv a {
+  color: #272727;
+}
+.cv .header .thumbnail {
+  margin: 0 10% 0;
+  width: 23%;
+  display: inline-block;
+  vertical-align: middle;
+}
+@media screen and (max-width: 500px) {
+  .cv .header .thumbnail {
+    width: 70%;
+    display: block;
+    margin: auto;
+  }
+}
+.cv .header .thumbnail img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+.cv .header .contact {
+  display: inline-block;
+  vertical-align: middle;
+}
+@media screen and (max-width: 500px) {
+  .cv .header .contact {
+    display: none;
+  }
+}
+.cv .arrow_up {
+  width: 0;
+  height: 0;
+  margin: 3px 20.9% 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #272727;
+}
+@media screen and (max-width: 500px) {
+  .cv .arrow_up {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #272727;
+    margin: 6px 47% 0;
+  }
+}
+.cv .barre1 {
+  height: 10px;
+  width: 98%;
+  margin: 0 auto;
+  border-top: 2px solid #272727;
+  border-left: 2px solid #272727;
+  border-right: 2px solid #272727;
+}
+.cv .barre2 {
+  height: 10px;
+  width: 98%;
+  margin: 0 auto;
+  border-bottom: 2px solid #272727;
+  border-left: 2px solid #272727;
+  border-right: 2px solid #272727;
+}
+.cv .bubble {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.cv .short_pres {
+  padding: 20px 10px;
+  margin: 0;
+  display: inline-block;
+  width: 80%;
+  text-align: justify;
+}
+@media screen and (max-width: 500px) {
+  .cv .short_pres {
+    padding: 5px 2px;
+  }
+  .cv .short_pres p {
+    margin: 10px;
+  }
+}
+.cv .left_quote {
+  content: "“";
+}
+.cv .right_quote {
+  content: "”";
+}
+.cv .left_quote,
+.cv .right_quote {
+  font-size: 90px;
+  line-height: 90px;
+  display: inline-block;
+  vertical-align: middle;
+}
+@media screen and (max-width: 750px) {
+  .cv .left_quote,
+  .cv .right_quote {
+    display: none;
+  }
+}
+.cv .skills {
+  margin-bottom: 20px;
+  width: 98%;
+  margin: 0 auto 4%;
+}
+.cv .skills h2 {
+  font-weight: bold;
+  color: #444;
+  font-size: 1.5em;
+}
+.cv .skills h2:before {
+  content: "";
+  display: inline-block;
+  margin-right: 1%;
+  width: 18%;
+  height: 10px;
+  background-color: #999;
+}
+.cv .skills h3 {
+  width: 18%;
+  display: inline-block;
+  font-size: 1.2em;
+  line-height: 1.2em;
+}
+@media screen and (max-width: 500px) {
+  .cv .skills h3 {
+    width: 100%;
+  }
+}
+.cv .skills p {
+  display: inline-block;
+  width: 81%;
+  vertical-align: middle;
+}
+@media screen and (max-width: 500px) {
+  .cv .skills p {
+    width: 100%;
+  }
+}
+.cv .skills h3,
+.cv .skills p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.cv .contact_mobile {
+  width: 90%;
+  padding-left: 10px;
+  background: #555;
+  color: #ddd;
+  margin: auto;
+}
+@media screen and (min-width: 500px) {
+  .cv .contact_mobile {
+    display: none;
+  }
+}
+.cv .contact_mobile a {
+  color: #eee;
+}

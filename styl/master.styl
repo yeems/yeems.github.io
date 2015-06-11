@@ -1,0 +1,185 @@
+@import '_settings'
+
+normalize()
+base()
+
+
+arrowUp ($size)
+  width 0
+  height 0
+  border-left $size solid transparent
+  border-right $size solid transparent
+  border-bottom $size solid black
+
+.main_title
+  font-family press-start
+  font-size 10vw
+  margin 30vh 10% 10vh
+  transition text-shadow 0.2s linear
+  &:hover
+    size_shadow = 0.5vw
+    cursor pointer
+    text-shadow size_shadow size_shadow 0 rgba(255,0,0,0.3), -(size_shadow) (-(size_shadow)) 0 rgba(0,0,255,0.3)
+    // color rgba(0,255,0,0.3)
+
+.links
+  font-family verdana
+  text-align center
+  font-size 25px
+  margin 5vh auto
+  width 80vw
+  border 4px solid black
+  padding-top 4vh
+  box-shadow 2px 2px 4px 2px rgba(39,39,39,0.7)
+  a
+    text-decoration none
+    color black
+    margin 0 2vw 4vh
+    display block
+    position relative
+    &::after
+      content ''
+      position absolute
+      bottom -1vh
+      left 0
+      width 100%
+      height 2px
+      visibility hidden
+      transform scaleX(0)
+      background-color black
+      transition all .3s ease
+    &:hover
+      &::after
+        transform scaleX(1)
+        visibility visible
+
+.cv
+  width 100%
+  max-width 800px
+  margin 0 auto 0
+  .title
+    font-size 3em
+    text-align center
+    @media screen and (max-width: 500px)
+      font-size 2.3em
+  a
+    color black
+  .header
+    .thumbnail
+      margin 0 10% 0
+      width 23%
+      display inline-block
+      vertical-align middle
+      @media screen and (max-width: 500px)
+        width 70%
+        display block
+        margin auto
+      img
+        width 100%
+        height auto
+        border-radius 50%
+    .contact
+      display inline-block
+      vertical-align middle
+      @media screen and (max-width: 500px)
+        display none
+  .arrow_up
+    width 0
+    height 0
+    $size = 5px
+    margin 3px 20.9% 0
+    border-left $size solid transparent
+    border-right $size solid transparent
+    border-bottom $size solid black
+    @media screen and (max-width: 500px)
+      $size = 10px
+      border-left $size solid transparent
+      border-right $size solid transparent
+      border-bottom $size solid black
+      margin 6px 47% 0
+
+  .barre1
+    height 10px
+    width 98%
+    margin 0 auto
+    $size = 2px
+    border-top $size solid black
+    border-left $size solid black
+    border-right $size solid black
+
+  .barre2
+    height 10px
+    width 98%
+    margin 0 auto
+    $size = 2px
+    border-bottom $size solid black
+    border-left $size solid black
+    border-right $size solid black
+  .bubble
+    margin 0
+    padding 0
+    text-align center
+  .short_pres
+    padding 20px 10px
+    margin 0
+    display inline-block
+    width 80%
+    text-align justify
+    @media screen and (max-width: 500px)
+      padding 5px 2px
+      p
+        margin 10px
+  .left_quote
+    content "“"
+  .right_quote
+    content "”"
+  .left_quote, .right_quote
+    font-size 90px
+    line-height 90px
+    display inline-block
+    vertical-align middle
+    @media screen and (max-width: 750px)
+      display none
+
+  .skills
+    $column_width = 18%
+    margin-bottom 20px
+    width 98%
+    margin 0 auto 4%
+    h2
+      font-weight bold
+      color darken(font-color, 20%)
+      font-size 1.5em
+      &:before
+        content ""
+        display inline-block
+        margin-right 1%
+        width $column_width
+        height 10px
+        background-color lighten(font-color, 40%)
+    h3
+      width $column_width
+      display inline-block
+      font-size 1.2em
+      line-height 1.2em
+      @media screen and (max-width: 500px)
+        width 100%
+    p
+      display inline-block
+      width 100% - $column_width - 1%
+      vertical-align middle
+      @media screen and (max-width: 500px)
+        width 100%
+    h3, p
+      margin-top 5px
+      margin-bottom 5px
+  .contact_mobile
+    @media screen and (min-width: 500px)
+      display none
+    width 90%
+    padding-left 10px
+    background #555
+    color #ddd
+    margin auto
+    a
+      color #eee
