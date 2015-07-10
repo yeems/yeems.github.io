@@ -64,9 +64,13 @@ arrowUp ($size) {
   font-size: 3em;
   text-align: center;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 530px) {
   .cv .title {
     font-size: 2.3em;
+  }
+  .cv .title .en,
+  .cv .title .zh {
+    display: block;
   }
 }
 .cv a {
@@ -78,7 +82,7 @@ arrowUp ($size) {
   display: inline-block;
   vertical-align: middle;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 530px) {
   .cv .header .thumbnail {
     width: 70%;
     display: block;
@@ -94,7 +98,7 @@ arrowUp ($size) {
   display: inline-block;
   vertical-align: middle;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 530px) {
   .cv .header .contact {
     display: none;
   }
@@ -107,7 +111,7 @@ arrowUp ($size) {
   border-right: 5px solid transparent;
   border-bottom: 5px solid #272727;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 530px) {
   .cv .arrow_up {
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
@@ -143,7 +147,7 @@ arrowUp ($size) {
   width: 80%;
   text-align: justify;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 530px) {
   .cv .short_pres {
     padding: 5px 2px;
   }
