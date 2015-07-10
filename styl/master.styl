@@ -1,8 +1,10 @@
-@import '_settings'
+@import _settings
 
-normalize()
-base()
+*
+  font-family helvetica-neue
 
+p
+  color black
 
 arrowUp ($size)
   width 0
@@ -120,7 +122,7 @@ arrowUp ($size)
     padding 0
     text-align center
   .short_pres
-    padding 20px 10px
+    padding 0 10px
     margin 0
     display inline-block
     width 80%
@@ -137,7 +139,6 @@ arrowUp ($size)
     font-size 90px
     line-height 90px
     display inline-block
-    vertical-align middle
     @media screen and (max-width: 750px)
       display none
 
@@ -162,13 +163,13 @@ arrowUp ($size)
       display inline-block
       font-size 1.2em
       line-height 1.2em
-      @media screen and (max-width: 500px)
+      @media screen and (max-width: 800px)
         width 100%
     p
       display inline-block
       width 100% - $column_width - 1%
       vertical-align middle
-      @media screen and (max-width: 500px)
+      @media screen and (max-width: 800px)
         width 100%
     h3, p
       margin-top 5px
